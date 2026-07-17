@@ -1,0 +1,37 @@
+Git kurulumu yönetici izni istediği için engelleniyor. Sana manuel adımları vereyim:
+
+## GitHub'a Yükleme Adımları
+
+### 1. Git Kur
+- [git-scm.com/downloads](https://git-scm.com/downloads) adresinden indir ve kur
+- Kurulum sırasında "Add to PATH" seçeneğini işaretle
+
+### 2. GitHub'da Repo Oluştur
+- [github.com/new](https://github.com/new) adresine git
+- Repo adı: `perfume-tracker`
+- **Public** seç
+- README, .gitignore, license ekleme选项larını boş bırak (biz ekledik)
+- "Create repository" tıkla
+
+### 3. Terminal'de Komutları Çalıştır
+Kurulumdan sonra bu komutları `perfume-tracker` klasöründe çalıştır:
+
+```bash
+# Git kurulumu tamamlandıktan sonra
+git init
+git add .
+git commit -m "Initial commit: Parfüm Takip Uygulaması"
+git branch -M main
+git remote add origin https://github.com/KULLANICI_ADI/perfume-tracker.git
+git push -u origin main
+```
+
+> `KULLANICI_ADI` yerine GitHub kullanıcı adını yaz.
+
+### 4. GitHub'a Giriş
+İlk `push` komutunda GitHub tarayıcıda açılır ve kullanıcı adı/şifre ister. **Personal Access Token** ile giriş yapman gerekiyor:
+- GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
+- `repo` yetkisi ile yeni token oluştur
+- Şifre yerine bu token'ı yapıştır
+
+Git kurulduktan sonra bana söylersen ben komutları çalıştırabilirim.
